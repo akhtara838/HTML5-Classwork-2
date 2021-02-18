@@ -4,7 +4,11 @@ function updateCountryView()
     var divCountry = document.getElementById("divCountry");
     if(ddCountry.value== "Yes")
     {
-        divCountry.classList.remove('invisible');
-        
+        divCountry.classList.remove("invisible");
+
+    }
+    else
+    {
+        divCountry.classList.add("invisible");
     }
 }
