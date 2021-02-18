@@ -61,5 +61,19 @@ function ValidateForm()
             txtCountry.classList.remove("hasError");
         }
     }
+
+    var elements = document.getElementsByTagName("input");
+    var invalidChar = ['#', '&', '<','>', '!', '`','"','~'];
+    for(let i =0; i <elements.length;i++)
+    {
+        for(let j =0; j<invalidChar.length;j++)
+        {
+            if(elements[i].value.indexOf(invalidChar[j])!= -1)
+            {
+                elements[i].classList.add("hasError");
+                valid=false;
+            }
+        }
+    }
     return valid;
 }
