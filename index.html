@@ -294,12 +294,12 @@
                                     Have you traveled to any countries in the past 14 days?
                                 </label>
                                 <div>
-                                    <select id="country" name="country" class="form-control">
+                                    <select id="country" name="country" class="form-control" onchange="updateCountryView()">
                                         <option value="No" selected>No</option>
                                         <option value="Yes">Yes</option>
                                     </select>
                                 </div>
-                                <div class="invisible">
+                                <div id = "divCountry" class="invisible">
                                     <div>
                                         <label for="txtcountry"
                                             class="col-sm-2 col-md-3 text-center mb-3 mb-md-0  col-form-label">
