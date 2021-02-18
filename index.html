@@ -5,16 +5,19 @@
     <title>Covid Center Website</title>
 </head>
 <style>
-    
-    </style>
+
+</style>
+
 <body>
     <header>
-        <h1>Welcome to the Covid Assessment Websaite!</h1>
+        <h1>Welcome to the Covid Assessment Website!</h1>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </header>
     <section>
-        <h2>Please fill out this form: </h2>
+        <div class="alert alert-info">
+            <h2>Please fill out this form: </h2>
+        </div>
         <article>
             <form>
                 <fieldset class="border">
@@ -29,9 +32,9 @@
                             <input type="text" id="txtFirstname" name="txtFirstname" required class="form-control"
                                 placeholder="First Name">
                         </div>
-                    
 
-                     <div class="col-sm-2 col-md-1 text-center mb-3 mb-md-0">
+
+                        <div class="col-sm-2 col-md-1 text-center mb-3 mb-md-0">
                             <label for="txtLastname" class="col-form-label">
                                 <span>Last Name: </span>
                             </label>
@@ -40,7 +43,7 @@
                             <input type="text" id="txtLastname" name="txtLastname" required class="form-control"
                                 placeholder="Last Name">
                         </div>
-                  
+
                     </div>
                     <div>
                         <fieldset class="border form-group">
@@ -74,10 +77,11 @@
                             <input type="tel" id="txttel" name="txttel" pattern="[0-9](3)-[0-9](3)-[0-9](4)"
                                 class="form-control" placeholder="555-555-5555">
                         </div>
-                    
-                    
-                        <label for="txtemail" class="col-sm-2 col-form-label col-md-1 text-center mb-3 mb-md-0">Email: </label>
-                        <div class="col-sm-10 col-md-3 text-center">
+
+
+                        <label for="txtemail" class="col-sm-2 col-form-label col-md-1 text-center mb-3 mb-md-0">Email:
+                        </label>
+                        <div class="col-sm-10 col-md-5 text-center">
                             <input type="email" required id="txtemail" name="txtemail" class="form-control"
                                 placeholder="name@example.com">
                         </div>
@@ -117,7 +121,7 @@
 
                 <fieldset>
                     <legend class="w-auto">Part 2: Potential Symptoms </legend>
-                    <div class="alert alert-light">
+                    <div class="alert alert-info">
                         <h4>Please answer the following questions to the best of your ability: </h4>
                     </div>
                     <div class="row form-group">
@@ -131,7 +135,7 @@
                             </select>
                         </div>
 
-                   
+
                         <label for="dd-cough" class="col-sm-2 col-md-4 text-center mb-3 mb-md-0  col-form-label">
                             Have you had any coughing in the past 2 weeks?
                         </label>
@@ -153,8 +157,7 @@
                                 <option value="Yes">Yes</option>
                             </select>
                         </div>
-                    </div>
-               <div class="row form-group">
+
                         <label for="dd-fatigue" class="col-sm-2 col-md-4 text-center mb-3 mb-md-0  col-form-label">
                             Have you had any fatigue in the past 2 weeks?
                         </label>
@@ -164,9 +167,10 @@
                                 <option value="Yes">Yes</option>
                             </select>
                         </div>
-                   
 
-                  
+                    </div>
+                    <div class="row form-group">
+
                         <label for="dd-muscle" class="col-sm-2 col-md-4 text-center mb-3 mb-md-0  col-form-label">
                             Have you had any muscle or body aches in the past 2 weeks?
                         </label>
@@ -176,8 +180,8 @@
                                 <option value="Yes">Yes</option>
                             </select>
                         </div>
-                        
-                    
+
+
                         <label for="dd-headache" class="col-sm-2 col-md-4 text-center mb-3 mb-md-0  col-form-label">
                             Have you had any headaches in the past 2 weeks?
                         </label>
@@ -188,7 +192,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="row form-group">
                         <label for="dd-taste" class="col-sm-2 col-md-4 text-center mb-3 mb-md-0  col-form-label">
                             Have you had any loss of taste or smell in the past 2 weeks?
@@ -199,7 +203,7 @@
                                 <option value="Yes">Yes</option>
                             </select>
                         </div>
-                        
+
                         <label for="dd-throat" class="col-sm-2 col-md-4 text-center mb-3 mb-md-0  col-form-label">
                             Have you had a sore throat anytime in the past 2 weeks?
                         </label>
@@ -209,9 +213,10 @@
                                 <option value="Yes">Yes</option>
                             </select>
                         </div>
-                    
 
-                    
+                    </div>
+                    <div class="row form-group">
+
                         <label for="dd-congestion" class="col-sm-2 col-md-4 text-center mb-3 mb-md-0  col-form-label">
                             Have you had any congestion or a runny nose in the past 2 weeks?
                         </label>
@@ -221,8 +226,7 @@
                                 <option value="Yes">Yes</option>
                             </select>
                         </div>
-                </div>
-                    <div class="row form-group">
+
                         <label for="dd-nausea" class="col-sm-2 col-md-4 text-center mb-3 mb-md-0  col-form-label">
                             Have you had any nausea or vomiting in the past 2 weeks?
                         </label>
@@ -232,7 +236,8 @@
                                 <option value="Yes">Yes</option>
                             </select>
                         </div>
-                    
+                    </div>
+                    <div class="row form-group">
 
                         <label for="dd-diarrhea" class="col-sm-2 col-md-4 text-center mb-3 mb-md-0  col-form-label">
                             Have you had any diarrhea in the past 2 weeks?
@@ -243,8 +248,8 @@
                                 <option value="Yes">Yes</option>
                             </select>
                         </div>
-                  
-                
+
+
                         <label for="dd-covi" class="col-sm-2 col-md-4 text-center mb-3 mb-md-0  col-form-label">
                             Have you had a covid test taken any time in the last 2 weeks??
                         </label>
@@ -296,7 +301,8 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="txtcountry" class="col-sm-2 col-md-3 text-center mb-3 mb-md-0  col-form-label">
+                                    <label for="txtcountry"
+                                        class="col-sm-2 col-md-3 text-center mb-3 mb-md-0  col-form-label">
                                         Which countries? (separate with commas)
                                     </label>
                                 </div>
