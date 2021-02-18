@@ -1,5 +1,14 @@
 .invisible
 {
     display: none;
-    
+
+}
+.errormsg
+{
+    color: red;
+}
+
+.hasError
+{
+    background-color: yellow;
 }

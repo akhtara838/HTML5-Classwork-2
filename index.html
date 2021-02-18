@@ -17,7 +17,7 @@
             <h2>Please fill out this form: </h2>
         </div>
         <article>
-            <form>
+            <form onsubmit="return ValidateForm()" id="mainform" novalidate>
                 <fieldset class="border">
                     <legend class="w-auto">Part 1: Patient Information</legend>
                     <div class="form-group row">
@@ -112,8 +112,9 @@
                         <div class="col-sm-10">
                             <input type="date" id="dob" name="dob" required class="form-control"
                                 placeholder="Date of Birth">
-                        </div>
 
+                            <div id="doberror" class="col-sm-5 invisible errormsg"></div>
+                        </div>
                     </div>
                 </fieldset>
 
@@ -294,12 +295,13 @@
                                     Have you traveled to any countries in the past 14 days?
                                 </label>
                                 <div>
-                                    <select id="country" name="country" class="form-control" onchange="updateCountryView()">
+                                    <select id="country" name="country" class="form-control"
+                                        onchange="updateCountryView()">
                                         <option value="No" selected>No</option>
                                         <option value="Yes">Yes</option>
                                     </select>
                                 </div>
-                                <div id = "divCountry" class="invisible">
+                                <div id="divCountry" class="invisible">
                                     <div>
                                         <label for="txtcountry"
                                             class="col-sm-2 col-md-3 text-center mb-3 mb-md-0  col-form-label">
