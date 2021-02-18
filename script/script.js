@@ -17,11 +17,13 @@ function ValidateForm()
 {
     var DoB = document.querySelector("#dob");
     var errorr = document.querySelector("#doberror");
+    var valid = true;
     if(DoB.value == "")
     {
         errorr.classList.remove("invisible");
         errorr.innerHTML = "The Date of Birth cannot be empty.";
         DoB.classList.add("hasError");
+        valid=false;
     }
     else
     {
@@ -32,6 +34,7 @@ function ValidateForm()
             errorr.classList.remove("invisible");
             errorr.innerHTML = "The Date of Birth must be before today's date.";
             DoB.classList.add("hasError");
+            valid=false;
         }
         else{
             errorr.classList.add("invisible");
@@ -40,5 +43,23 @@ function ValidateForm()
         }
 
     }
-    return false;
+
+    var ddCountry = document.querySelector("#country");
+    if (ddCountry.value=="Yes")
+    {
+        var txtCountry = document.querySelector("#txtcountry");
+        var err = document.querySelector("#divCountryError")
+        if(txtCountry.value==""){
+            document.querySelector("#divCountryError").classList.remove("invisible");
+            err.innerHTML = "List at least one country.";
+            txtCountry.classList.add("hasError");
+            valid=false;
+
+        }
+        else{
+            document.querySelector("#divCountryError").classList.add("invisible");
+            txtCountry.classList.remove("hasError");
+        }
+    }
+    return valid;
 }
