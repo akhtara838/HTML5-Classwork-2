@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Covid Center Website</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Covid Assessment Website!</h1>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </header>
+    <section>
+        <h2>Please fill out this form: </h2>
+        <article>
+            <form>
+                <fieldset class="border">
+                    <legend class="w-auto">Part 1: Patient Information</legend>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="txtFirstname" class="col-form-label">
+                                <span>First Name: </span>
+                            </label>
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="text" id="txtFirstname" name="txtFirstname" required class="form-control"
+                                placeholder="First Name">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="txtLastname" class="col-form-label">
+                                <span>Last Name: </span>
+                            </label>
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="text" id="txtLastname" name="txtLastname" required class="form-control"
+                                placeholder="Last Name">
+                        </div>
+                    </div>
+
+                    <div>
+                        <fieldset class="border form-group">
+                            <div class="row">
+                                <legend class="col-sm-2 col-form-label">Gender: </legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input type="radio" id="rbMale" name="gender" value="Male"
+                                            class="form-check-input">
+                                        <label for="rbMale" class="form-check-label">Male</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="rbFemale" name="gender" value="Female"
+                                            class="form-check-input">
+                                        <label for="rbFemale" class="form-check-label">Female</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="rbOther" name="gender" value="Other"
+                                            class="form-check-input">
+                                        <label for="rbOther" class="form-check-label">Other</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="row form-group">
+                        <label for="txttel" class="col-sm-2 col-form-label">
+                            Phone Number:
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="tel" id="txttel" name="txttel" pattern="[0-9](3)-[0-9](3)-[0-9](4)"
+                                class="form-control" placeholder="555-555-5555">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="txtemail" class="col-sm-2 col-form-label">Email: </label>
+                        <div class="col-sm-10">
+                            <input type="email" required id="txtemail" name="txtemail" class="form-control"
+                                placeholder="name@example.com">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="txtaddress" class="col-sm-2 col-form-label"> <span>Address: </span></label>
+                        <div class="col-md-12 col-lg-6">
+                            <input type="text" id="txtaddress" name="txtaddress" class="form-control"
+                                placeholder="Street Name">
+                        </div>
+
+                        <div class="col">
+                            <input type="text" id="txtCity" name="txtCity" class="form-control" placeholder="City">
+                        </div>
+
+                        <div class="col">
+                            <input type="text" id="txtState" name="txtState" class="form-control" placeholder="State">
+                        </div>
+
+                        <div class="col">
+                            <input type="text" id="txtZipcode" name="txtZipcode" class="form-control"
+                                placeholder="Zipcode" pattern="[0-9](5)">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="dob" class="col-sm-2 col-form-label">
+                            Date of Birth:
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="date" id="dob" name="dob" required class="form-control"
+                                placeholder="Date of Birth">
+                        </div>
+
+                    </div>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend class="w-auto">Part 2: Potential Symptoms </legend>
+                    <div class="alert alert-light">
+                        <h4>Please answer the following questions to the best of your ability: </h4>
+                    </div>
+                    <div class="row form-group">
+                        <label for="dd-fever" class="col-sm-2 col-form-label">
+                            Have you had any fever or chills in the past 2 weeks?
+                        </label>
+                        <div>
+                            <select id="dd-fever" name="dd-fever" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="dd-cough" class="col-sm-2 col-form-label">
+                            Have you had any coughing in the past 2 weeks?
+                        </label>
+                        <div>
+                            <select id="dd-cough" name="dd-cough" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="dd-breath" class="col-sm-2 col-form-label">
+                            Have you had any shortness of breath or difficulty breathing in the past 2
+                            weeks?
+                        </label>
+                        <div>
+                            <select id="dd-breath" name="dd-breath" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="dd-fatigue" class="col-sm-2 col-form-label">
+                            Have you had any fatigue in the past 2 weeks?
+                        </label>
+                        <div>
+                            <select id="dd-fatigue" name="dd-fatigue" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="dd-muscle" class="col-sm-2 col-form-label">
+                            Have you had any muscle or body aches in the past 2 weeks?
+                        </label>
+                        <div>
+                            <select id="dd-muscle" name="dd-muscle" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="dd-headache" class="col-sm-2 col-form-label">
+                            Have you had any headaches in the past 2 weeks?
+                        </label>
+                        <div>
+                            <select id="dd-headache" name="dd-headache" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="dd-taste" class="col-sm-2 col-form-label">
+                            Have you had any loss of taste or smell in the past 2 weeks?
+                        </label>
+                        <div>
+                            <select id="dd-taste" name="dd-taste" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="dd-throat" class="col-sm-2 col-form-label">
+                            Have you had a sore throat anytime in the past 2 weeks?
+                        </label>
+                        <div>
+                            <select id="dd-throat" name="dd-throat" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="dd-congestion" class="col-sm-2 col-form-label">
+                            Have you had any congestion or a runny nose in the past 2 weeks?
+                        </label>
+                        <div>
+                            <select id="dd-congestion" name="dd-congestion" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="dd-nausea" class="col-sm-2 col-form-label">
+                            Have you had any nausea or vomiting in the past 2 weeks?
+                        </label>
+                        <div>
+                            <select id="dd-nausea" name="dd-nausea" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="dd-diarrhea" class="col-sm-2 col-form-label">
+                            Have you had any diarrhea in the past 2 weeks?
+                        </label>
+                        <div>
+                            <select id="dd-diarrhea" name="dd-diarrhea" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </fieldset>
+                <fieldset>
+                    <legend class="w-auto">Part 3: Other Questions</legend>
+                    <div class="row form-group">
+                        <label for="contact" class="col-sm-2 col-form-label">
+                            <span>Have you had contact (within 6 feet for > 15 minutes), or caring for someone who is
+                                diagnosed <br>
+                                with COVID-19 in the last 14 days and were not wearing proper personal protective
+                                equipment? </span>
+                        </label>
+                        <div>
+                            <select id="contact" name="contact" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label for="diagnosis" class="col-sm-2 col-form-label">
+                            Have you had a diagnosis of COVID-19 in the last 10 days?
+                        </label>
+                        <div>
+                            <select id="diagnosis" name="diagnosis" class="form-control">
+                                <option value="No" selected>No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <fieldset class="border form-group">
+                            <div class="row">
+                                <label for="country" class="col-sm-2 col-form-label">
+                                    Have you traveled to any countries in the past 14 days?
+                                </label>
+                                <div>
+                                    <select id="country" name="country" class="form-control">
+                                        <option value="No" selected>No</option>
+                                        <option value="Yes">Yes</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="txtcountry" class="col-sm-2 col-form-label">
+                                        Which countries? (separate with commas)
+                                    </label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" id="txtcountry" name="txtcountry" required class="form-control"
+                                        placeholder="USA">
+                                </div>
+                            </div>
+                    </div>
+                </fieldset>
+                </div>
+
+                <div class="row form-group">
+                    <label for="socialized" class="col-sm-2 col-form-label">
+                        Have you socialized with a group of 6 or more people in the last 14 days?
+                    </label>
+                    <div>
+                        <select id="socialized" name="socialized" class="form-control">
+                            <option value="No" selected>No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="txttemp" class="col-sm-2 col-form-label">
+                        Current Temperature:
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="text" id="txttemp" name="txttemp" required pattern="\d{1,2}(\.\d{0,4})?"
+                            class="form-control" placeholder="98.6">
+                    </div>
+                </div>
+                </fieldset>
+                <p>
+                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                    <button type="reset" class="btn btn-secondary">RESET</button>
+                </p>
+            </form>
+        </article>
+    </section>
+    <footer>
+        copyright @2021 Covid Center Website
+    </footer>
+</body>
+
+</html>
