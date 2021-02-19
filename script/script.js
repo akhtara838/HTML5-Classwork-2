@@ -32,7 +32,7 @@ function ValidateForm()
         if(dobdate >= today)
         {
             errorr.classList.remove("invisible");
-            errorr.innerHTML = "The Date of Birth must be before today's date.";
+            errorr.innerHTML = "The Date of Birth must be before today's date."
             DoB.classList.add("hasError");
             valid=false;
         }
