@@ -21,7 +21,7 @@ function ValidateForm()
     if(DoB.value == "")
     {
         errorr.classList.remove("invisible");
-        errorr.innerHTML = "The Date of Birth cannot be empty.";
+        errorr.innerHTML = "The Date of Birth cannot be empty."
         DoB.classList.add("hasError");
         valid=false;
     }
