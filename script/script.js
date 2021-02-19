@@ -22,6 +22,7 @@ function ValidateForm()
     {
         errorr.classList.remove("invisible");
         errorr.innerHTML = "The Date of Birth cannot be empty."
+        document.getElementById("#dob").style.backgroundColor = "yellow";
         DoB.classList.add("hasError");
         valid=false;
     }
