@@ -17,7 +17,7 @@
             <h2>Please fill out this form: </h2>
         </div>
         <article>
-            <form onsubmit="return ValidateForm()" id="mainform" novalidate>
+            <form onsubmit="return ValidateForm()" id="mainform">
                 <fieldset class="border">
                     <legend class="w-auto">Part 1: Patient Information</legend>
                     <div class="form-group row">
@@ -29,6 +29,8 @@
                         <div class="col-sm-10 col-md-5 text-center">
                             <input type="text" id="txtFirstname" name="txtFirstname" required class="form-control"
                                 placeholder="First Name">
+
+                                <div id="allerror" class="col-sm-4 invisible errormsg"></div>
                         </div>
 
 
@@ -40,6 +42,8 @@
                         <div class="col-sm-10 col-md-5 text-center">
                             <input type="text" id="txtLastname" name="txtLastname" required class="form-control"
                                 placeholder="Last Name">
+                                <div id="allerror" class="col-sm-4 invisible errormsg"></div>
+
                         </div>
 
                     </div>
@@ -72,7 +76,7 @@
                             Phone Number:
                         </label>
                         <div class="col-sm-10 col-md-5 text-center">
-                            <input type="tel" id="txttel" name="txttel" pattern="[0-9](3)-[0-9](3)-[0-9](4)"
+                            <input type="tel" id="txttel" name="txttel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                 class="form-control" placeholder="555-555-5555">
                         </div>
 
@@ -90,19 +94,26 @@
                         <div class="col">
                             <input type="text" id="txtaddress" name="txtaddress" class="form-control"
                                 placeholder="Street Name">
+                                <div id="allerror" class="col-sm-4 invisible errormsg"></div>
                         </div>
 
                         <div class="col">
                             <input type="text" id="txtCity" name="txtCity" class="form-control" placeholder="City">
+                            <div id="allerror" class="col-sm-4 invisible errormsg"></div>
+
                         </div>
 
                         <div class="col">
                             <input type="text" id="txtState" name="txtState" class="form-control" placeholder="State">
+                            <div id="allerror" class="col-sm-4 invisible errormsg"></div>
+
                         </div>
 
                         <div class="col">
                             <input type="text" id="txtZipcode" name="txtZipcode" class="form-control"
-                                placeholder="Zipcode" pattern="[0-9](5)">
+                                placeholder="Zipcode" pattern="[0-9]{5}">
+                                <div id="allerror" class="col-sm-4 invisible errormsg"></div>
+
                         </div>
                     </div>
                     
@@ -111,7 +122,7 @@
                             Date of Birth:
                         </label>
                         <div class="col-sm-10">
-                            <input type="date" id="dob" name="dob" required class="form-control hasError"
+                            <input type="date" id="txtdob" name="txtdob" required class="form-control"
                                 placeholder="Date of Birth">
 
                             <div id="doberror" class="col-sm-4 invisible errormsg"></div>
@@ -305,14 +316,13 @@
                                 <div id="divCountry" class="invisible">
                                     <div>
                                         <label for="txtcountry"
-                                            class="col-sm-2 col-md-4 text-center mb-3 mb-md-0  col-form-label">
-                                            Which countries? (separate with commas)
+                                            class="col-sm-2 col-md-4 mb-3 mb-md-0  col-form-label">
+                                           <span class="nowrap"> Which countries? (separate with commas)</span>
                                         </label>
                                     </div>
                                     <div class="col-sm-10 col-md-5 text-center ">
                                         <input type="text" id="txtcountry" name="txtcountry" required
-                                            class="form-control" placeholder="USA">
-
+                                            class="form-control nowrap" placeholder="USA">
                                             <div id="divCountryError" class="col-sm-5 invisible errormsg"></div>
                                     </div>
                                 </div>
@@ -337,6 +347,8 @@
                     <div class="col-sm-10 col-md-3 text-center">
                         <input type="text" id="txttemp" name="txttemp" required pattern="\d{1,2}(\.\d{0,4})?"
                             class="form-control" placeholder="98.6">
+                            <div id="allerror" class="col-sm-4 invisible errormsg"></div>
+
                     </div>
                 </div>
                 </fieldset>
